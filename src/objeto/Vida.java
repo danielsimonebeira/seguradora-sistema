@@ -1,17 +1,15 @@
 package objeto;
 
-import java.util.Date;
-
 public class Vida {
-    private Date dtNascimento;
+    private String dtNascimento;
     private String nomeBeneficiario;
     private String localResidenciaVida;
 
-    public Date getDtNascimento() {
+    public String getDtNascimento() {
         return dtNascimento;
     }
 
-    public void setDtNascimento(Date dtNascimento) {
+    public void setDtNascimento(String dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
 

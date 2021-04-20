@@ -1,11 +1,9 @@
 package objeto;
 
-import java.util.Date;
-
 public class Veiculo {
     private String marcaVeiculo;
     private String modeloVeiculo;
-    private Date anoVeiculo;
+    private int anoVeiculo;
     private String localResidencia;
 
     public String getMarcaVeiculo() {
@@ -24,11 +22,11 @@ public class Veiculo {
         this.modeloVeiculo = modeloVeiculo;
     }
 
-    public Date getAnoVeiculo() {
+    public int getAnoVeiculo() {
         return anoVeiculo;
     }
 
-    public void setAnoVeiculo(Date anoVeiculo) {
+    public void setAnoVeiculo(int anoVeiculo) {
         this.anoVeiculo = anoVeiculo;
     }
 

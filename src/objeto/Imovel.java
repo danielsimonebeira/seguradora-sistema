@@ -2,6 +2,7 @@ package objeto;
 
 public class Imovel {
     private String cidadeImovel;
+    private String enderecoImovel;
     private Float tamanhoImovel;
     private Float valorIptu;
 
@@ -11,6 +12,14 @@ public class Imovel {
 
     public void setCidadeImovel(String cidadeImovel) {
         this.cidadeImovel = cidadeImovel;
+    }
+
+    public String getEnderecoImovel() {
+        return enderecoImovel;
+    }
+
+    public void setEnderecoImovel(String enderecoImovel) {
+        this.enderecoImovel = enderecoImovel;
     }
 
     public Float getTamanhoImovel() {
