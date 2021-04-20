@@ -9,8 +9,8 @@ public class SeguradoraMain {
     private static Integer escolha;
 
     public static void main(String[] args) {
-//		Integer escolha;
         leia = new Scanner(System.in);
+
 
 
         System.out.println("==============_Seguradora_==============");
@@ -18,7 +18,7 @@ public class SeguradoraMain {
         escolha = leia.nextInt();
 
         if (escolha == 1) {
-
+            subMenu();
         } else if (escolha == 2) {
             System.out.println("2");
         } else if (escolha == 3) {
@@ -29,13 +29,16 @@ public class SeguradoraMain {
 
     }
 
-    public void subMenu() {
-
+    public static void subMenu() {
         System.out.println("---[ Cadastro ]---");
         System.out.println("Digite o tipo de seguro que deseja cadastrar:\n   [ 1 ] - Imóveis\n   [ 2 ] - Veículo\n   [ 3 ] - Vida\n   [ 0 ] - Voltar ao Menu Principal");
         escolha = leia.nextInt();
         if (escolha == 1) {
             cadastro.cadastroImovel();
+        } else if (escolha == 2) {
+            cadastro.cadastroVeiculo();
+        } else if (escolha ==3) {
+            cadastro.cadastroVida();
         }
     }
 
