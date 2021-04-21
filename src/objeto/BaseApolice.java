@@ -1,6 +1,7 @@
 package objeto;
 
 public class BaseApolice {
+
     private Integer codigoApolice;
     private String nomeCliente;
     private String descricaoRestricoes;
@@ -9,7 +10,7 @@ public class BaseApolice {
         return codigoApolice;
     }
 
-    public void setCodigoApolice(Integer codigoApolice) {
+    public final void setCodigoApolice(Integer codigoApolice) {
         this.codigoApolice = codigoApolice;
     }
 
@@ -17,7 +18,7 @@ public class BaseApolice {
         return nomeCliente;
     }
 
-    public void setNomeCliente(String nomeCliente) {
+    public final void setNomeCliente(String nomeCliente) {
         this.nomeCliente = nomeCliente;
     }
 
@@ -25,8 +26,7 @@ public class BaseApolice {
         return descricaoRestricoes;
     }
 
-    public void setDescricaoRestricoes(String descricaoRestricoes) {
+    public final void setDescricaoRestricoes(String descricaoRestricoes) {
         this.descricaoRestricoes = descricaoRestricoes;
     }
-
 }

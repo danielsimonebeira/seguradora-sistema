@@ -8,6 +8,7 @@ import objeto.Vida;
 import java.util.Scanner;
 
 public class Cadastro {
+
     private final Scanner leia = new Scanner(System.in);
     private final BaseApolice baseApolice = new BaseApolice();
     private final Imovel imovel = new Imovel();
@@ -20,7 +21,6 @@ public class Cadastro {
         baseApolice.setNomeCliente(leia.nextLine());
         System.out.println("Descrição das restrições: ");
         baseApolice.setDescricaoRestricoes(leia.nextLine());
-
     }
 
     public void cadastroImovel() {
@@ -56,7 +56,4 @@ public class Cadastro {
         System.out.print("Local de Residência: ");
         vida.setLocalResidenciaVida(leia.nextLine());
     }
-
-
-
 }

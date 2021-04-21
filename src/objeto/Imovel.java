@@ -1,6 +1,7 @@
 package objeto;
 
 public class Imovel {
+
     private String cidadeImovel;
     private String enderecoImovel;
     private Float tamanhoImovel;
@@ -10,7 +11,7 @@ public class Imovel {
         return cidadeImovel;
     }
 
-    public void setCidadeImovel(String cidadeImovel) {
+    public final void setCidadeImovel(String cidadeImovel) {
         this.cidadeImovel = cidadeImovel;
     }
 
@@ -18,7 +19,7 @@ public class Imovel {
         return enderecoImovel;
     }
 
-    public void setEnderecoImovel(String enderecoImovel) {
+    public final void setEnderecoImovel(String enderecoImovel) {
         this.enderecoImovel = enderecoImovel;
     }
 
@@ -26,7 +27,7 @@ public class Imovel {
         return tamanhoImovel;
     }
 
-    public void setTamanhoImovel(Float tamanhoImovel) {
+    public final void setTamanhoImovel(Float tamanhoImovel) {
         this.tamanhoImovel = tamanhoImovel;
     }
 
@@ -34,9 +35,7 @@ public class Imovel {
         return valorIptu;
     }
 
-    public void setvalorIptu(Float valorIptu) {
+    public final void setvalorIptu(Float valorIptu) {
         this.valorIptu = valorIptu;
     }
-
-
 }
