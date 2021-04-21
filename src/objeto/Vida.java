@@ -1,6 +1,7 @@
 package objeto;
 
 public class Vida {
+
     private String dtNascimento;
     private String nomeBeneficiario;
     private String localResidenciaVida;
@@ -9,7 +10,7 @@ public class Vida {
         return dtNascimento;
     }
 
-    public void setDtNascimento(String dtNascimento) {
+    public final void setDtNascimento(String dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
 
@@ -17,7 +18,7 @@ public class Vida {
         return nomeBeneficiario;
     }
 
-    public void setNomeBeneficiario(String nomeBeneficiario) {
+    public final void setNomeBeneficiario(String nomeBeneficiario) {
         this.nomeBeneficiario = nomeBeneficiario;
     }
 
@@ -25,8 +26,7 @@ public class Vida {
         return localResidenciaVida;
     }
 
-    public void setLocalResidenciaVida(String localResidenciaVida) {
+    public final void setLocalResidenciaVida(String localResidenciaVida) {
         this.localResidenciaVida = localResidenciaVida;
     }
-
 }
