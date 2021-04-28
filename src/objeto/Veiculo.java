@@ -2,10 +2,10 @@ package objeto;
 
 public class Veiculo extends Apolice {
 
-    private String marcaVeiculo;
-    private String modeloVeiculo;
-    private int anoVeiculo;
-    private String localResidencia;
+    private final String marcaVeiculo;
+    private final String modeloVeiculo;
+    private final int anoVeiculo;
+    private final String localResidencia;
 
     public Veiculo(Integer codigoApolice, String nomeCliente, String descricaoRestricoes, Float valorDoBem, String marcaVeiculo, String modeloVeiculo, int anoVeiculo, String localResidencia) {
         super(codigoApolice, nomeCliente, descricaoRestricoes, valorDoBem);

@@ -6,9 +6,9 @@ import java.util.GregorianCalendar;
 
 public class Vida extends Apolice {
 
-    private Date dtNascimento;
-    private String nomeBeneficiario;
-    private String localResidenciaVida;
+    private final Date dtNascimento;
+    private final String nomeBeneficiario;
+    private final String localResidenciaVida;
 
     public Vida(Integer codigoApolice, String nomeCliente, String descricaoRestricoes, Float valorDoBem, Date dtNascimento, String nomeBeneficiario, String localResidenciaVida) {
         super(codigoApolice, nomeCliente, descricaoRestricoes, valorDoBem);

@@ -13,6 +13,8 @@ import java.util.Date;
 
 public class Cadastro {
 
+    private final BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
     private static final String MENSAGEM_MENU_PRINCIPAL_APOLICE = "---[ Cadastro de Apólice ]---";
     private static final String MENSAGEM_OPCAO_CODIGO_APOLICE = "Código da Apolice: ";
     private static final String MENSAGEM_OPCAO_NOME_CLIENTE = "Nome do cliente: ";
@@ -31,8 +33,6 @@ public class Cadastro {
     private static final String MENSAGEM_OPCAO_RESIDENCIA_BENEFICIARIO_VIDA = "Local de residência do beneficiário: ";
 
     public Imovel cadastroImovel() throws IOException {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-
         System.out.println(MENSAGEM_MENU_PRINCIPAL_APOLICE);
         System.out.println(MENSAGEM_OPCAO_CODIGO_APOLICE);
         final int codigoApolice = Integer.parseInt(input.readLine());
@@ -55,8 +55,6 @@ public class Cadastro {
     }
 
     public Veiculo cadastroVeiculo() throws IOException {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-
         System.out.println(MENSAGEM_MENU_PRINCIPAL_APOLICE);
         System.out.println(MENSAGEM_OPCAO_CODIGO_APOLICE);
         final int codigoApolice = Integer.parseInt(input.readLine());
@@ -79,8 +77,6 @@ public class Cadastro {
     }
 
     public Vida cadastroVida() throws ParseException, IOException {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-
         System.out.println(MENSAGEM_MENU_PRINCIPAL_APOLICE);
         System.out.println(MENSAGEM_OPCAO_CODIGO_APOLICE);
         final int codigoApolice = Integer.parseInt(input.readLine());
