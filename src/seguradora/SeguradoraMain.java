@@ -36,6 +36,7 @@ public class SeguradoraMain {
     private static final String MENSAGEM_CAMPO_BUSCA_NOME = "Digite o nome para buscar: ";
 
     private static Scanner leia;
+    private static int escolha;
 
     public static void main(String[] args) throws ParseException, IOException {
         menuPrincipal();
@@ -43,24 +44,25 @@ public class SeguradoraMain {
 
     public static void menuPrincipal() throws ParseException, IOException {
         leia = new Scanner(System.in);
-        int escolha;
 
         System.out.println(MENSAGEM_MENU_PRINCIPAL_TITULO);
         System.out.print(ESCOLHAS_MENU_PRINCIPAL);
 
         escolha = leia.nextInt();
 
-        if (escolha == 1) {
-            subMenuCadastro();
-        } else if (escolha == 2) {
-            subMenuListagem();
-        } else if (escolha == 3) {
-            subMenuRemocao();
-        } else if (escolha == 0) {
-            Runtime.getRuntime().exit(0);
-        } else {
-            System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
-        }
+        do {
+            if (escolha == 1) {
+                subMenuCadastro();
+            } else if (escolha == 2) {
+                subMenuListagem();
+            } else if (escolha == 3) {
+                subMenuRemocao();
+            } else if (escolha == 0) {
+                break;
+            } else {
+                System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
+            }
+        } while (escolha != 0);
     }
 
     public static void subMenuCadastro() throws ParseException, IOException {
