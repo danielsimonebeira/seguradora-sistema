@@ -1,16 +1,17 @@
 package seguradora;
 
-import objeto.BaseApolice;
 import objeto.Imovel;
 import objeto.Veiculo;
 import objeto.Vida;
 
+import java.sql.Date;
 import java.util.Scanner;
 
 public class Cadastro {
 
     private final Scanner leia = new Scanner(System.in);
-    private final BaseApolice baseApolice = new BaseApolice();
+
+    // Remover estas classes
     private final Imovel imovel = new Imovel();
     private final Veiculo veiculo = new Veiculo();
     private final Vida vida = new Vida();
@@ -30,16 +31,35 @@ public class Cadastro {
     private static final String MENSAGEM_OPCAO_NOME_BENEFICIARIO_VIDA = "Nome do beneficiário: ";
     private static final String MENSAGEM_OPCAO_RESIDENCIA_BENEFICIARIO_VIDA = "Local de residência do beneficiário: ";
 
-    public void cadastroBase() {
+    private static final int CODIGO_CADASTRO_IMOVEL = 1;
+    private static final int CODIGO_CADASTRO_VEICULO = 2;
+    private static final int CODIGO_CADASTRO_VIDA = 3;
+
+    public void cadastroBase(final int obj) {
         System.out.println(MENSAGEM_MENU_PRINCIPAL_APOLICE);
-        System.out.println(MENSAGEM_OPCAO_NOME_CLIENTE);
-        baseApolice.setNomeCliente(leia.nextLine());
-        System.out.println(MENSAGEM_OPCAO_DESCRICAO_RESTRICOES);
-        baseApolice.setDescricaoRestricoes(leia.nextLine());
+        switch (obj) {
+            case (CODIGO_CADASTRO_IMOVEL):
+                System.out.println(MENSAGEM_OPCAO_NOME_CLIENTE);
+                imovel.setNomeCliente(leia.nextLine());
+                System.out.println(MENSAGEM_OPCAO_DESCRICAO_RESTRICOES);
+                imovel.setDescricaoRestricoes(leia.nextLine());
+            case (CODIGO_CADASTRO_VEICULO):
+                System.out.println(MENSAGEM_OPCAO_NOME_CLIENTE);
+                veiculo.setNomeCliente(leia.nextLine());
+                System.out.println(MENSAGEM_OPCAO_DESCRICAO_RESTRICOES);
+                veiculo.setDescricaoRestricoes(leia.nextLine());
+            case (CODIGO_CADASTRO_VIDA):
+                System.out.println(MENSAGEM_OPCAO_NOME_CLIENTE);
+                vida.setNomeCliente(leia.nextLine());
+                System.out.println(MENSAGEM_OPCAO_DESCRICAO_RESTRICOES);
+                vida.setDescricaoRestricoes(leia.nextLine());
+            default:
+                throw new RuntimeException("Código Inexistente!");
+        }
     }
 
     public void cadastroImovel() {
-        cadastroBase();
+        cadastroBase(CODIGO_CADASTRO_IMOVEL);
         System.out.print(MENSAGEM_OPCAO_CIDADE_IMOVEL);
         imovel.setCidadeImovel(leia.nextLine());
         System.out.print(MENSAGEM_OPCAO_ENDERECO_IMOVEL);
@@ -51,7 +71,7 @@ public class Cadastro {
     }
 
     public void cadastroVeiculo() {
-        cadastroBase();
+        cadastroBase(CODIGO_CADASTRO_VEICULO);
         System.out.print(MENSAGEM_OPCAO_MARCA_VEICULO);
         veiculo.setMarcaVeiculo(leia.nextLine());
         System.out.print(MENSAGEM_OPCAO_MODELO_VEICULO);
@@ -63,9 +83,9 @@ public class Cadastro {
     }
 
     public void cadastroVida() {
-        cadastroBase();
+        cadastroBase(CODIGO_CADASTRO_VIDA);
         System.out.print(MENSAGEM_OPCAO_DATA_NASCIMENTO_VIDA);
-        vida.setDtNascimento(leia.nextLine());
+        vida.setDtNascimento(Date.valueOf(leia.nextLine()));
         System.out.print(MENSAGEM_OPCAO_NOME_BENEFICIARIO_VIDA);
         vida.setNomeBeneficiario(leia.nextLine());
         System.out.print(MENSAGEM_OPCAO_RESIDENCIA_BENEFICIARIO_VIDA);
