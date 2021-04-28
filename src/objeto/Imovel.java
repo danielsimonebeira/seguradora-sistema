@@ -18,14 +18,15 @@ public class Imovel extends Apolice {
     @Override
     public String toString() {
         return "Imovel{" +
-                "codigoApolice='" + getCodigoApolice() + '\'' +
-                "nomeCliente='" + getNomeCliente() + '\'' +
-                "descricaoRestricoes='" + getDescricaoRestricoes() + '\'' +
-                "valorDoBem='" + getValorDoBem() + '\'' +
-                "cidadeImovel='" + cidadeImovel + '\'' +
-                ", enderecoImovel='" + enderecoImovel + '\'' +
-                ", tamanhoImovel=" + tamanhoImovel +
-                ", valorIptu=" + valorIptu +
+                "Código Apólice ='" + getCodigoApolice() + '\'' +
+                "Nome do Cliente ='" + getNomeCliente() + '\'' +
+                "Descrição das Restrições ='" + getDescricaoRestricoes() + '\'' +
+                "Valor do bem ='" + getValorDoBem() + '\'' +
+                "Cidade do Imóvel ='" + cidadeImovel + '\'' +
+                "Endereço do Imóvel='" + enderecoImovel + '\'' +
+                "Tamanho do Imóvel ='" + tamanhoImovel + '\'' +
+                "Valor do Iptu ='" + "R$" + valorIptu + '\'' +
+                "Cálculo da Apólice ='" + "R$" + calculoApolice(getValorDoBem(), getTamanhoImovel()) + '\'' +
                 '}';
     }
 

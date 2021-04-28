@@ -7,6 +7,8 @@ import java.util.GregorianCalendar;
 
 public class Vida extends Apolice {
 
+    private static final int ANO_ATUAL = Calendar.getInstance().get(Calendar.YEAR);
+
     private final Date dtNascimento;
     private final String nomeBeneficiario;
     private final String localResidenciaVida;
@@ -21,13 +23,14 @@ public class Vida extends Apolice {
     @Override
     public String toString() {
         return "Vida{" +
-                "codigoApolice='" + getCodigoApolice() + '\'' +
-                "nomeCliente='" + getNomeCliente() + '\'' +
-                "descricaoRestricoes='" + getDescricaoRestricoes() + '\'' +
-                "valorDoBem='" + getValorDoBem() + '\'' +
-                "dtNascimento=" + getDtNascimentoString(dtNascimento) +
-                ", nomeBeneficiario='" + nomeBeneficiario + '\'' +
-                ", localResidenciaVida='" + localResidenciaVida + '\'' +
+                "Código Apólice ='" + getCodigoApolice() + '\'' +
+                "Nome do Cliente ='" + getNomeCliente() + '\'' +
+                "Descrição das Restrições ='" + getDescricaoRestricoes() + '\'' +
+                "Valor do Bem ='" + "R$" + getValorDoBem() + '\'' +
+                "Data de Nascimento =" + getDtNascimentoString(dtNascimento) +
+                "Nome do Beneficiário ='" + nomeBeneficiario + '\'' +
+                "Local de Residência do Beneficiário ='" + localResidenciaVida + '\'' +
+                "Cálculo da Apólice ='" + "R$" + calculoApolice(getValorDoBem(), getDtNascimento(), ANO_ATUAL) + '\'' +
                 '}';
     }
 

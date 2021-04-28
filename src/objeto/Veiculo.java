@@ -1,6 +1,10 @@
 package objeto;
 
+import java.util.Calendar;
+
 public class Veiculo extends Apolice {
+
+    private static final int ANO_ATUAL = Calendar.getInstance().get(Calendar.YEAR);
 
     private final String marcaVeiculo;
     private final String modeloVeiculo;
@@ -18,14 +22,15 @@ public class Veiculo extends Apolice {
     @Override
     public String toString() {
         return "Veiculo{" +
-                "codigoApolice='" + getCodigoApolice() + '\'' +
-                "nomeCliente='" + getNomeCliente() + '\'' +
-                "descricaoRestricoes='" + getDescricaoRestricoes() + '\'' +
-                "valorDoBem='" + getValorDoBem() + '\'' +
-                "marcaVeiculo='" + marcaVeiculo + '\'' +
-                ", modeloVeiculo='" + modeloVeiculo + '\'' +
-                ", anoVeiculo=" + anoVeiculo +
-                ", localResidencia='" + localResidencia + '\'' +
+                "Código Apolice ='" + getCodigoApolice() + '\'' +
+                "Nome do Cliente ='" + getNomeCliente() + '\'' +
+                "Descrição das Restrições ='" + getDescricaoRestricoes() + '\'' +
+                "Valor do Bem ='" + "R$" + getValorDoBem() + '\'' +
+                "Marca do Veículo ='" + marcaVeiculo + '\'' +
+                "Modelo do Veículo ='" + modeloVeiculo + '\'' +
+                "Ano do Veículo =" + anoVeiculo +
+                "Local de Residência do Proprietário ='" + localResidencia + '\'' +
+                "Valor da Apólice ='" + "R$" + calculoApolice(getValorDoBem(), getAnoVeiculo(), ANO_ATUAL) + '\'' +
                 '}';
     }
 
