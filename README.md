@@ -10,10 +10,10 @@
 | --- | --- |
 | Possui classe abstrata? | X |
 | Possui construtores com parâmetros? | X |
-| Possui método de leitura por classe de seguro? | |
-| Possui método de listagem por classe de seguro? | |
+| Possui método de leitura por classe de seguro? | X |
+| Possui método de listagem por classe de seguro? | X |
 | Limpa a tela do terminal após cada operação? | |
-| Utiliza variáveis de classe? | |
+| Utiliza variáveis de classe? | X |
 
 ## Fluxo do sistema
 
