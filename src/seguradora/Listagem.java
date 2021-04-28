@@ -4,14 +4,14 @@ import objeto.Imovel;
 import objeto.Veiculo;
 import objeto.Vida;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class Listagem {
 
     private static final String NENHUM_RESULTADO_PESQUISA = "Nenhum resultado encontrado com esse nome de cliente!";
+    private static final int ANO_ATUAL = Calendar.getInstance().get(Calendar.YEAR);
 
-    // Ter método para retorno por id/nome/alguma propriedade do objeto
-    // Ter método que retorna lista com todos os objetos por classe
     public void listaImovelPorNomeCliente(final List<Imovel> imoveis, String nomeCliente) {
         int qtdResultados = 0;
         for (Imovel imovel : imoveis) {
@@ -20,8 +20,7 @@ public class Listagem {
                         "\n----------[ Apólices de imóveis ]----------" +
                         "\n------------------------------------------" +
                         "\nNome: " + imovel.getNomeCliente() +
-                        "\nValor da apólice: " +
-                        "\nQuantidade de itens cadastrados: " +
+                        "\nValor da apólice: " + imovel.calculoApolice(imovel.getValorDoBem(), imovel.getTamanhoImovel()) +
                         "\n-----------------------------------");
                 qtdResultados++;
             }
@@ -29,12 +28,11 @@ public class Listagem {
                 System.out.println(NENHUM_RESULTADO_PESQUISA);
             }
         }
-
     }
 
     public void listaTodosImoveis(List<Imovel> imoveis) {
         for (Imovel imovel : imoveis) {
-            System.out.println(imovel);
+            System.out.println(imovel.toString());
         }
     }
 
@@ -46,8 +44,7 @@ public class Listagem {
                         "\n----------[ Apólices de veiculos ]----------" +
                         "\n--------------------------------------------" +
                         "\nNome: " + veiculo.getNomeCliente() +
-                        "\nValor da apólice: " +
-                        "\nQuantidade de itens cadastrados: " +
+                        "\nValor da apólice: " + veiculo.calculoApolice(veiculo.getValorDoBem(), veiculo.getAnoVeiculo(), ANO_ATUAL) +
                         "\n-------------------------------------");
                 qtdResultados++;
             }
@@ -59,7 +56,7 @@ public class Listagem {
 
     public void listaTodosVeiculos(final List<Veiculo> veiculos) {
         for (Veiculo veiculo : veiculos) {
-            System.out.println(veiculo);
+            System.out.println(veiculo.toString());
         }
     }
 
@@ -71,8 +68,7 @@ public class Listagem {
                         "\n----------[ Apólices de vida ]----------" +
                         "\n----------------------------------------" +
                         "\nNome: " + vida.getNomeCliente() +
-                        "\nValor da apólice: " +
-                        "\nQuantidade de itens cadastrados: " +
+                        "\nValor da apólice: " + vida.calculoApolice(vida.getValorDoBem(), vida.getDtNascimento(), ANO_ATUAL) +
                         "\n----------------------------------------");
                 qtdResultados++;
             }
@@ -84,7 +80,7 @@ public class Listagem {
 
     public void listaTodosVida(final List<Vida> vidas) {
         for (Vida vida : vidas) {
-            System.out.println(vida);
+            System.out.println(vida.toString());
         }
     }
 }
