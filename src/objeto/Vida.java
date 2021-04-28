@@ -1,5 +1,6 @@
 package objeto;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -24,7 +25,7 @@ public class Vida extends Apolice {
                 "nomeCliente='" + getNomeCliente() + '\'' +
                 "descricaoRestricoes='" + getDescricaoRestricoes() + '\'' +
                 "valorDoBem='" + getValorDoBem() + '\'' +
-                "dtNascimento=" + dtNascimento +
+                "dtNascimento=" + getDtNascimentoString(dtNascimento) +
                 ", nomeBeneficiario='" + nomeBeneficiario + '\'' +
                 ", localResidenciaVida='" + localResidenciaVida + '\'' +
                 '}';
@@ -40,6 +41,11 @@ public class Vida extends Apolice {
 
     public String getLocalResidenciaVida() {
         return localResidenciaVida;
+    }
+
+    public String getDtNascimentoString(Date dtNascimento) {
+        final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        return simpleDateFormat.format(dtNascimento);
     }
 
     @Override
