@@ -20,35 +20,17 @@ public abstract class Apolice {
         return codigoApolice;
     }
 
-    public final void setCodigoApolice(Integer codigoApolice) {
-        this.codigoApolice = codigoApolice;
-    }
-
     public String getNomeCliente() {
         return nomeCliente;
-    }
-
-    public final void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
     }
 
     public String getDescricaoRestricoes() {
         return descricaoRestricoes;
     }
 
-    public final void setDescricaoRestricoes(String descricaoRestricoes) {
-        this.descricaoRestricoes = descricaoRestricoes;
-    }
-
     public Float getValorDoBem() {
         return valorDoBem;
     }
-
-    public void setValorDoBem(Float valorDoBem) {
-        this.valorDoBem = valorDoBem;
-    }
-
-    public Double calculoApolice(final int valorDoBem) { return 0D; }
 
     public Double calculoApolice(final float valorDoBem, final float tamanhoM2) { return 0D; }
 
