@@ -2,10 +2,10 @@ package objeto;
 
 public class Imovel extends Apolice {
 
-    private String cidadeImovel;
-    private String enderecoImovel;
-    private Float tamanhoImovel;
-    private Float valorIptu;
+    private final String cidadeImovel;
+    private final String enderecoImovel;
+    private final Float tamanhoImovel;
+    private final Float valorIptu;
 
     public Imovel(Integer codigoApolice, String nomeCliente, String descricaoRestricoes, Float valorDoBem, String cidadeImovel, String enderecoImovel, Float tamanhoImovel, Float valorIptu) {
         super(codigoApolice, nomeCliente, descricaoRestricoes, valorDoBem);

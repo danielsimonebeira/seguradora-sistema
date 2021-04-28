@@ -4,10 +4,10 @@ import java.util.Date;
 
 public abstract class Apolice {
 
-    private Integer codigoApolice;
-    private String nomeCliente;
-    private String descricaoRestricoes;
-    private Float valorDoBem;
+    private final Integer codigoApolice;
+    private final String nomeCliente;
+    private final String descricaoRestricoes;
+    private final Float valorDoBem;
 
     public Apolice(Integer codigoApolice, String nomeCliente, String descricaoRestricoes, Float valorDoBem) {
         this.codigoApolice = codigoApolice;
