@@ -1,17 +1,22 @@
 package seguradora;
 
+import objeto.Imovel;
+import objeto.Veiculo;
+import objeto.Vida;
+
+import java.util.List;
+
 public class Remocao {
 
-    // Adicionar métodos de remoção
-    public void removeImovelPorCodigo(Integer codigoApolice) {
-
+    public void removeImovelPorCodigo(List<Imovel> imoveis, Integer codigoApolice) {
+        imoveis.removeIf(imovel -> imovel.getCodigoApolice().equals(codigoApolice));
     }
 
-    public void removeVeiculoPorCodigo(Integer codigoApolice) {
-
+    public void removeVeiculoPorCodigo(List<Veiculo> veiculos, Integer codigoApolice) {
+        veiculos.removeIf(veiculo -> veiculo.getCodigoApolice().equals(codigoApolice));
     }
 
-    public void removeVidaPorCodigo(Integer codigoApolice) {
-
+    public void removeVidaPorCodigo(List<Vida> vidas, Integer codigoApolice) {
+        vidas.removeIf(vida -> vida.getCodigoApolice().equals(codigoApolice));
     }
 }
