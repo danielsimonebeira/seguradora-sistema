@@ -17,4 +17,5 @@
 
 ## Fluxo do sistema
 
-![seguradora2](https://user-images.githubusercontent.com/44556635/115316650-20856200-a150-11eb-96e0-fb5f6bbcb227.png)
+![seguradora3](https://user-images.githubusercontent.com/44556635/116441654-028ec000-a828-11eb-98e8-a5c6384fef53.png)
+
