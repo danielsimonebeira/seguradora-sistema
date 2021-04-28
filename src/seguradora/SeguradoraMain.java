@@ -33,6 +33,7 @@ public class SeguradoraMain {
     private static final String MENSAGEM_TITULO_ESCOLHA_REMOCAO = "Digite o tipo de seguro que deseja remover: ";
     private static final String MENSAGEM_TITULO_CODIGO_REMOCAO = "Digite o código da apólice que deseja remover: ";
     private static final String MENSAGEM_ERRO_OPCAO_INVALIDA = "Digite apenas os números listados acima!";
+    private static final String MENSAGEM_CAMPO_BUSCA_NOME = "Digite o nome para buscar: ";
 
     private static Scanner leia;
     private static Integer escolha;
@@ -147,6 +148,7 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosImoveis(imoveis);
         } else if (escolhaListagem == 2) {
+            System.out.print(MENSAGEM_CAMPO_BUSCA_NOME);
             nomeCliente = leia.next();
             listagem.listaImovelPorNomeCliente(imoveis, nomeCliente);
         } else if (escolhaListagem == 0) {
@@ -167,6 +169,7 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosVeiculos(veiculos);
         } else if (escolhaListagem == 2) {
+            System.out.print(MENSAGEM_CAMPO_BUSCA_NOME);
             nomeCliente = leia.next();
             listagem.listaVeiculoPorNomeCliente(veiculos, nomeCliente);
         } else if (escolhaListagem == 0) {
@@ -187,6 +190,7 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosVida(vidas);
         } else if (escolhaListagem == 2) {
+            System.out.print(MENSAGEM_CAMPO_BUSCA_NOME);
             nomeCliente = leia.next();
             listagem.listaVidaPorNomeCliente(vidas, nomeCliente);
         } else if (escolhaListagem == 0) {
