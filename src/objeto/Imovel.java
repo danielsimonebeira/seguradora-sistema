@@ -33,32 +33,16 @@ public class Imovel extends Apolice {
         return cidadeImovel;
     }
 
-    public final void setCidadeImovel(String cidadeImovel) {
-        this.cidadeImovel = cidadeImovel;
-    }
-
     public String getEnderecoImovel() {
         return enderecoImovel;
-    }
-
-    public final void setEnderecoImovel(String enderecoImovel) {
-        this.enderecoImovel = enderecoImovel;
     }
 
     public Float getTamanhoImovel() {
         return tamanhoImovel;
     }
 
-    public final void setTamanhoImovel(Float tamanhoImovel) {
-        this.tamanhoImovel = tamanhoImovel;
-    }
-
     public Float getvalorIptu() {
         return valorIptu;
-    }
-
-    public final void setvalorIptu(Float valorIptu) {
-        this.valorIptu = valorIptu;
     }
 
     @Override

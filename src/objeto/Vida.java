@@ -34,24 +34,12 @@ public class Vida extends Apolice {
         return dtNascimento;
     }
 
-    public void setDtNascimento(Date dtNascimento) {
-        this.dtNascimento = dtNascimento;
-    }
-
     public String getNomeBeneficiario() {
         return nomeBeneficiario;
     }
 
-    public final void setNomeBeneficiario(String nomeBeneficiario) {
-        this.nomeBeneficiario = nomeBeneficiario;
-    }
-
     public String getLocalResidenciaVida() {
         return localResidenciaVida;
-    }
-
-    public final void setLocalResidenciaVida(String localResidenciaVida) {
-        this.localResidenciaVida = localResidenciaVida;
     }
 
     @Override
