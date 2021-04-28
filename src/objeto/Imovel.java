@@ -1,6 +1,6 @@
 package objeto;
 
-public class Imovel {
+public class Imovel extends Apolice {
 
     private String cidadeImovel;
     private String enderecoImovel;
@@ -37,5 +37,10 @@ public class Imovel {
 
     public final void setvalorIptu(Float valorIptu) {
         this.valorIptu = valorIptu;
+    }
+
+    @Override
+    public Double calculoApolice(final int valorDoBem, final int tamanhoM2) {
+        return (valorDoBem * 0.05) + ((tamanhoM2 / 100) * 0.02);
     }
 }

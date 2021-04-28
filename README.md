@@ -8,8 +8,8 @@
 
 | Requisito | Foi feito? |
 | --- | --- |
-| Possui classe abstrata? | |
-| Possui construtores com parâmetros? | |
+| Possui classe abstrata? | X |
+| Possui construtores com parâmetros? | X |
 | Possui método de leitura por classe de seguro? | |
 | Possui método de listagem por classe de seguro? | |
 | Limpa a tela do terminal após cada operação? | |

@@ -1,5 +1,11 @@
 package seguradora;
 
+import objeto.Imovel;
+import objeto.Veiculo;
+import objeto.Vida;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -7,6 +13,10 @@ public class SeguradoraMain {
 
     private static final Cadastro cadastro = new Cadastro();
     private static final Listagem listagem = new Listagem();
+
+    private static List<Imovel> imoveis = new ArrayList<>();
+    private static List<Veiculo> veiculos = new ArrayList<>();
+    private static List<Vida> vidas = new ArrayList<>();
 
     private static final String MENSAGEM_MENU_PRINCIPAL_TITULO = "============== Seguradora ==============";
     private static final String ESCOLHAS_MENU_PRINCIPAL = "Menu: \n  [ 1 ] - Cadastro\n  [ 2 ] - Listar\n  [ 3 ] - Remover\n  [ 0 ] - Sair\nDigite sua opção: ";
@@ -25,7 +35,6 @@ public class SeguradoraMain {
     }
 
     public static void MenuPrincipal() {
-
         leia = new Scanner(System.in);
         do {
             System.out.println(MENSAGEM_MENU_PRINCIPAL_TITULO);
@@ -39,12 +48,15 @@ public class SeguradoraMain {
                 subMenuListagem();
             } else if (escolha == 3) {
                 System.out.println("3");
+            } else if (escolha == 0){
+                break;
             } else {
                 System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
             }
         } while (escolha != 0);
     }
 
+    // Falta parâmetros
     public static void subMenuCadastro() {
         System.out.println(MENSAGEM_MENU_CADASTRO_TITULO);
         System.out.print(MENSAGEM_TITULO_ESCOLHA_CADASTRO + ESCOLHAS_MENU_ACOES);
@@ -55,7 +67,7 @@ public class SeguradoraMain {
             cadastro.cadastroImovel();
         } else if (escolha == 2) {
             cadastro.cadastroVeiculo();
-        } else if (escolha ==3) {
+        } else if (escolha == 3) {
             cadastro.cadastroVida();
         } else if (escolha == 0) {
             MenuPrincipal();
@@ -64,6 +76,7 @@ public class SeguradoraMain {
         }
     }
 
+    // Falta parâmetros
     public static void subMenuListagem() {
         int escolhaListagem;
 
@@ -76,7 +89,7 @@ public class SeguradoraMain {
             listagem.listaImovel();
         } else if (escolhaListagem == 2) {
             listagem.listaVeiculo();
-        } else if (escolhaListagem ==3) {
+        } else if (escolhaListagem == 3) {
             listagem.listaVida();
         } else if (escolhaListagem == 0) {
             MenuPrincipal();

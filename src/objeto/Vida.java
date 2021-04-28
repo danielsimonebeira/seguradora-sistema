@@ -1,16 +1,20 @@
 package objeto;
 
-public class Vida {
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
-    private String dtNascimento;
+public class Vida extends Apolice {
+
+    private Date dtNascimento;
     private String nomeBeneficiario;
     private String localResidenciaVida;
 
-    public String getDtNascimento() {
+    public Date getDtNascimento() {
         return dtNascimento;
     }
 
-    public final void setDtNascimento(String dtNascimento) {
+    public void setDtNascimento(Date dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
 
@@ -28,5 +32,14 @@ public class Vida {
 
     public final void setLocalResidenciaVida(String localResidenciaVida) {
         this.localResidenciaVida = localResidenciaVida;
+    }
+
+    @Override
+    public Double calculoApolice(final int valorDoBem, final Date dtNascimento, final int anoAtual) {
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(dtNascimento);
+        final int decadasVida = ((anoAtual - calendar.get(Calendar.YEAR)) / 10);
+        final double porcentagemDecada = Math.round(decadasVida) * 0.05;
+        return valorDoBem * porcentagemDecada;
     }
 }

@@ -1,6 +1,6 @@
 package objeto;
 
-public class Veiculo {
+public class Veiculo extends Apolice {
 
     private String marcaVeiculo;
     private String modeloVeiculo;
@@ -37,5 +37,17 @@ public class Veiculo {
 
     public final void setLocalResidencia(String localResidencia) {
         this.localResidencia = localResidencia;
+    }
+
+    @Override
+    public Double calculoApolice(final int valorDoBem, final int anoVeiculo, final int anoAtual) {
+        final int anosDeUso = anoAtual - anoVeiculo;
+        if (anosDeUso < 5) {
+            return (valorDoBem * 0.05);
+        } else if (anosDeUso <= 10) {
+            return (valorDoBem * 0.1);
+        } else {
+            return (valorDoBem * 0.2);
+        }
     }
 }
