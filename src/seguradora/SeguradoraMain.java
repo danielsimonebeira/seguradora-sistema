@@ -55,16 +55,19 @@ public class SeguradoraMain {
         leia = new Scanner(System.in);
 
         System.out.println(MENSAGEM_MENU_PRINCIPAL_TITULO);
-        System.out.print(ESCOLHAS_MENU_PRINCIPAL);
+        System.out.println(ESCOLHAS_MENU_PRINCIPAL);
 
         escolha = leia.nextInt();
 
         do {
             if (escolha == 1) {
+                clearConsole();
                 subMenuCadastro();
             } else if (escolha == 2) {
+                clearConsole();
                 subMenuListagem();
             } else if (escolha == 3) {
+                clearConsole();
                 subMenuRemocao();
             } else if (escolha == 0) {
                 break;
@@ -78,7 +81,7 @@ public class SeguradoraMain {
         int escolhaListagem;
 
         System.out.println(MENSAGEM_MENU_CADASTRO_TITULO);
-        System.out.print(MENSAGEM_TITULO_ESCOLHA_CADASTRO + ESCOLHAS_MENU_ACOES);
+        System.out.println(MENSAGEM_TITULO_ESCOLHA_CADASTRO + ESCOLHAS_MENU_ACOES);
 
         escolhaListagem = leia.nextInt();
 
@@ -89,6 +92,7 @@ public class SeguradoraMain {
         } else if (escolhaListagem == 3) {
             vidas.add(cadastro.cadastroVida(vidas));
         } else if (escolhaListagem == 0) {
+            clearConsole();
             menuPrincipal();
         } else {
             System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
@@ -99,17 +103,21 @@ public class SeguradoraMain {
         int escolhaListagem;
 
         System.out.println(MENSAGEM_MENU_LISTAGEM_TITULO);
-        System.out.print(MENSAGEM_TITULO_ESCOLHA_LISTAGEM + ESCOLHAS_MENU_ACOES);
+        System.out.println(MENSAGEM_TITULO_ESCOLHA_LISTAGEM + ESCOLHAS_MENU_ACOES);
 
         escolhaListagem = leia.nextInt();
 
         if (escolhaListagem == 1) {
+            clearConsole();
             subMenuListagemImovel();
         } else if (escolhaListagem == 2) {
+            clearConsole();
             subMenuListagemVeiculo();
         } else if (escolhaListagem == 3) {
+            clearConsole();
             subMenuListagemVida();
         } else if (escolhaListagem == 0) {
+            clearConsole();
             menuPrincipal();
         } else {
             System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
@@ -137,6 +145,7 @@ public class SeguradoraMain {
             codigoApolice = leia.nextInt();
             remocao.removeVidaPorCodigo(vidas, codigoApolice);
         } else if (escolhaListagem == 0) {
+            clearConsole();
             menuPrincipal();
         } else {
             System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
@@ -144,6 +153,7 @@ public class SeguradoraMain {
     }
 
     public static void subMenuListagemOpcoes() {
+        clearConsole();
         System.out.println(ESCOLHAS_SUBMENU_ACOES);
     }
 
@@ -157,10 +167,11 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosImoveis(imoveis);
         } else if (escolhaListagem == 2) {
-            System.out.print(MENSAGEM_CAMPO_BUSCA_CODIGO);
+            System.out.println(MENSAGEM_CAMPO_BUSCA_CODIGO);
             codigoCliente = leia.nextInt();
             listagem.listaImovelPorCodigoCliente(imoveis, codigoCliente);
         } else if (escolhaListagem == 0) {
+            clearConsole();
             subMenuListagem();
         } else {
             System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
@@ -177,10 +188,11 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosVeiculos(veiculos);
         } else if (escolhaListagem == 2) {
-            System.out.print(MENSAGEM_CAMPO_BUSCA_CODIGO);
+            System.out.println(MENSAGEM_CAMPO_BUSCA_CODIGO);
             codigoCliente = leia.nextInt();
             listagem.listaVeiculoPorCodigoCliente(veiculos, codigoCliente);
         } else if (escolhaListagem == 0) {
+            clearConsole();
             subMenuListagem();
         } else {
             System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
@@ -197,13 +209,19 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosVida(vidas);
         } else if (escolhaListagem == 2) {
-            System.out.print(MENSAGEM_CAMPO_BUSCA_CODIGO);
+            System.out.println(MENSAGEM_CAMPO_BUSCA_CODIGO);
             codigoCliente = leia.nextInt();
             listagem.listaVidaPorCodigoCliente(vidas, codigoCliente);
         } else if (escolhaListagem == 0) {
+            clearConsole();
             subMenuListagem();
         } else {
             System.out.println(MENSAGEM_ERRO_OPCAO_INVALIDA);
         }
+    }
+
+    public static void clearConsole() {
+        // Gambiarra porque pra limpar console das IDEs muitas vezes o uso de plugin é necessário
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     }
 }
