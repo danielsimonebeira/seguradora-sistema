@@ -19,16 +19,16 @@ public class Cadastro {
     private static final String MENSAGEM_OPCAO_CODIGO_APOLICE = "Código da Apolice: ";
     private static final String MENSAGEM_OPCAO_NOME_CLIENTE = "Nome do cliente: ";
     private static final String MENSAGEM_OPCAO_DESCRICAO_RESTRICOES = "Descrição das restrições: ";
-    private static final String MENSAGEM_OPCAO_VALOR_D0_BEM = "Valor do bem: ";
+    private static final String MENSAGEM_OPCAO_VALOR_D0_BEM = "Valor do bem (digite apenas números válidos): ";
     private static final String MENSAGEM_OPCAO_CIDADE_IMOVEL = "Cidade do imóvel: ";
     private static final String MENSAGEM_OPCAO_ENDERECO_IMOVEL = "Endereço do imóvel: ";
-    private static final String MENSAGEM_OPCAO_TAMANHO_IMOVEL = "Tamanho do imóvel em m²: ";
-    private static final String MENSAGEM_OPCAO_IPTU_IMOVEL = "Valor do IPTU do imóvel: ";
+    private static final String MENSAGEM_OPCAO_TAMANHO_IMOVEL = "Tamanho do imóvel em m² (digite apenas números válidos): ";
+    private static final String MENSAGEM_OPCAO_IPTU_IMOVEL = "Valor do IPTU do imóvel (digite apenas números válidos): ";
     private static final String MENSAGEM_OPCAO_MARCA_VEICULO = "Marca do veículo: ";
     private static final String MENSAGEM_OPCAO_MODELO_VEICULO = "Modelo do veículo: ";
-    private static final String MENSAGEM_OPCAO_ANO_FABRICACAO_VEICULO = "Ano de fabricação do veículo: ";
+    private static final String MENSAGEM_OPCAO_ANO_FABRICACAO_VEICULO = "Ano de fabricação do veículo (digite apenas números válidos): ";
     private static final String MENSAGEM_OPCAO_RESIDENCIA_PROPIETARIO_VEICULO = "Local de residência do proprietário: ";
-    private static final String MENSAGEM_OPCAO_DATA_NASCIMENTO_VIDA = "Data de nascimento: ";
+    private static final String MENSAGEM_OPCAO_DATA_NASCIMENTO_VIDA = "Data de nascimento (digite no formato: dia/mês/ano): ";
     private static final String MENSAGEM_OPCAO_NOME_BENEFICIARIO_VIDA = "Nome do beneficiário: ";
     private static final String MENSAGEM_OPCAO_RESIDENCIA_BENEFICIARIO_VIDA = "Local de residência do beneficiário: ";
 

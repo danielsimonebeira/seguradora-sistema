@@ -21,18 +21,27 @@ public class SeguradoraMain {
     private static final List<Veiculo> veiculos = new ArrayList<>();
     private static final List<Vida> vidas = new ArrayList<>();
 
+    // Títulos MENU
     private static final String MENSAGEM_MENU_PRINCIPAL_TITULO = "============== Seguradora ==============";
-    private static final String ESCOLHAS_MENU_PRINCIPAL = "Menu: \n  [ 1 ] - Cadastro\n  [ 2 ] - Listar\n  [ 3 ] - Remover\n  [ 0 ] - Sair\nDigite sua opção: ";
-    private static final String ESCOLHAS_MENU_ACOES = "\n   [ 1 ] - Imóvel\n   [ 2 ] - Veículo\n   [ 3 ] - Vida\n   [ 0 ] - Voltar ao Menu Principal\nDigite sua opção: ";
-    private static final String ESCOLHAS_SUBMENU_ACOES = "\n   [ 1 ] - Listar Todos\n   [ 2 ] - Listar por Nome\n   [ 0 ] - Voltar\nDigite sua opção: ";
     private static final String MENSAGEM_MENU_CADASTRO_TITULO = "\n------[ Cadastro ]------";
     private static final String MENSAGEM_MENU_LISTAGEM_TITULO = "\n------[ Listagem ]------";
     private static final String MENSAGEM_MENU_REMOCAO_TITULO = "\n------[ Remoção ]------";
+
+    // Escolhas Menu
+    private static final String ESCOLHAS_MENU_PRINCIPAL = "Menu: \n  [ 1 ] - Cadastro\n  [ 2 ] - Listar\n  [ 3 ] - Remover\n  [ 0 ] - Sair\nDigite sua opção: ";
+    private static final String ESCOLHAS_MENU_ACOES = "\n   [ 1 ] - Imóvel\n   [ 2 ] - Veículo\n   [ 3 ] - Vida\n   [ 0 ] - Voltar ao Menu Principal\nDigite sua opção: ";
+    private static final String ESCOLHAS_SUBMENU_ACOES = "\n   [ 1 ] - Listar Todos\n   [ 2 ] - Listar por Nome\n   [ 0 ] - Voltar\nDigite sua opção: ";
+
+    // Títulos CRUD
     private static final String MENSAGEM_TITULO_ESCOLHA_CADASTRO = "Digite o tipo de seguro que deseja cadastrar: ";
     private static final String MENSAGEM_TITULO_ESCOLHA_LISTAGEM = "Digite o tipo de seguro que deseja listar: ";
     private static final String MENSAGEM_TITULO_ESCOLHA_REMOCAO = "Digite o tipo de seguro que deseja remover: ";
     private static final String MENSAGEM_TITULO_CODIGO_REMOCAO = "Digite o código da apólice que deseja remover: ";
+
+    // Erro
     private static final String MENSAGEM_ERRO_OPCAO_INVALIDA = "Digite apenas os números listados acima!";
+
+    // Busca
     private static final String MENSAGEM_CAMPO_BUSCA_NOME = "Digite o nome para buscar: ";
 
     private static Scanner leia;
