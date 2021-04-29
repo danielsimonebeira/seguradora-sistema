@@ -12,10 +12,10 @@ public class Listagem {
     private static final String NENHUM_RESULTADO_PESQUISA = "Nenhum resultado encontrado com esse nome de cliente!";
     private static final int ANO_ATUAL = Calendar.getInstance().get(Calendar.YEAR);
 
-    public void listaImovelPorNomeCliente(final List<Imovel> imoveis, String nomeCliente) {
+    public void listaImovelPorCodigoCliente(final List<Imovel> imoveis, final int codigoApolice) {
         int qtdResultados = 0;
         for (Imovel imovel : imoveis) {
-            if (imovel.getNomeCliente().equals(nomeCliente)) {
+            if (imovel.getCodigoApolice().equals(codigoApolice)) {
                 System.out.println("------------------------------------------" +
                         "\n----------[ Apólices de imóveis ]----------" +
                         "\n------------------------------------------" +
@@ -36,10 +36,10 @@ public class Listagem {
         }
     }
 
-    public void listaVeiculoPorNomeCliente(final List<Veiculo> veiculos, final String nomeCliente) {
+    public void listaVeiculoPorCodigoCliente(final List<Veiculo> veiculos, final int codigoApolice) {
         int qtdResultados = 0;
         for (Veiculo veiculo : veiculos) {
-            if (veiculo.getNomeCliente().equals(nomeCliente)) {
+            if (veiculo.getCodigoApolice().equals(codigoApolice)) {
                 System.out.println("--------------------------------------------" +
                         "\n----------[ Apólices de veiculos ]----------" +
                         "\n--------------------------------------------" +
@@ -60,10 +60,10 @@ public class Listagem {
         }
     }
 
-    public void listaVidaPorNomeCliente(final List<Vida> vidas, final String nomeCliente) {
+    public void listaVidaPorCodigoCliente(final List<Vida> vidas, final int codigoApolice) {
         int qtdResultados = 0;
         for (Vida vida : vidas) {
-            if (vida.getNomeCliente().equals(nomeCliente)) {
+            if (vida.getCodigoApolice().equals(codigoApolice)) {
                 System.out.println("----------------------------------------" +
                         "\n----------[ Apólices de vida ]----------" +
                         "\n----------------------------------------" +
