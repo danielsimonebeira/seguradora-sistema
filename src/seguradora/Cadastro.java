@@ -10,13 +10,13 @@ import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Cadastro {
 
     private final BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
     private static final String MENSAGEM_MENU_PRINCIPAL_APOLICE = "---[ Cadastro de Apólice ]---";
-    private static final String MENSAGEM_OPCAO_CODIGO_APOLICE = "Código da Apolice: ";
     private static final String MENSAGEM_OPCAO_NOME_CLIENTE = "Nome do cliente: ";
     private static final String MENSAGEM_OPCAO_DESCRICAO_RESTRICOES = "Descrição das restrições: ";
     private static final String MENSAGEM_OPCAO_VALOR_D0_BEM = "Valor do bem (digite apenas números válidos): ";
@@ -32,10 +32,9 @@ public class Cadastro {
     private static final String MENSAGEM_OPCAO_NOME_BENEFICIARIO_VIDA = "Nome do beneficiário: ";
     private static final String MENSAGEM_OPCAO_RESIDENCIA_BENEFICIARIO_VIDA = "Local de residência do beneficiário: ";
 
-    public Imovel cadastroImovel() throws IOException {
+    public Imovel cadastroImovel(List<Imovel> imoveis) throws IOException {
         System.out.println(MENSAGEM_MENU_PRINCIPAL_APOLICE);
-        System.out.println(MENSAGEM_OPCAO_CODIGO_APOLICE);
-        final int codigoApolice = Integer.parseInt(input.readLine());
+        final int codigoApolice = imoveis.size() + 1;
         System.out.println(MENSAGEM_OPCAO_NOME_CLIENTE);
         final String nomeCliente = input.readLine();
         System.out.println(MENSAGEM_OPCAO_DESCRICAO_RESTRICOES);
@@ -54,10 +53,9 @@ public class Cadastro {
         return new Imovel(codigoApolice, nomeCliente, descricaoCliente, valorDoBem, cidadeImovel, enderecoImovel, tamanhoImovel, iptuImovel);
     }
 
-    public Veiculo cadastroVeiculo() throws IOException {
+    public Veiculo cadastroVeiculo(List<Veiculo> veiculos) throws IOException {
         System.out.println(MENSAGEM_MENU_PRINCIPAL_APOLICE);
-        System.out.println(MENSAGEM_OPCAO_CODIGO_APOLICE);
-        final int codigoApolice = Integer.parseInt(input.readLine());
+        final int codigoApolice = veiculos.size() + 1;
         System.out.println(MENSAGEM_OPCAO_NOME_CLIENTE);
         final String nomeCliente = input.readLine();
         System.out.println(MENSAGEM_OPCAO_DESCRICAO_RESTRICOES);
@@ -76,10 +74,9 @@ public class Cadastro {
         return new Veiculo(codigoApolice, nomeCliente, descricaoCliente, valorDoBem, marcaVeiculo, modeloVeiculo, anoVeiculo, residenciaPropietario);
     }
 
-    public Vida cadastroVida() throws ParseException, IOException {
+    public Vida cadastroVida(List<Vida> vidas) throws ParseException, IOException {
         System.out.println(MENSAGEM_MENU_PRINCIPAL_APOLICE);
-        System.out.println(MENSAGEM_OPCAO_CODIGO_APOLICE);
-        final int codigoApolice = Integer.parseInt(input.readLine());
+        final int codigoApolice = vidas.size() + 1;
         System.out.println(MENSAGEM_OPCAO_NOME_CLIENTE);
         final String nomeCliente = input.readLine();
         System.out.println(MENSAGEM_OPCAO_DESCRICAO_RESTRICOES);

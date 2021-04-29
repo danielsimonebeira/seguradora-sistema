@@ -42,7 +42,7 @@ public class SeguradoraMain {
     private static final String MENSAGEM_ERRO_OPCAO_INVALIDA = "Digite apenas os números listados acima!";
 
     // Busca
-    private static final String MENSAGEM_CAMPO_BUSCA_NOME = "Digite o nome para buscar: ";
+    private static final String MENSAGEM_CAMPO_BUSCA_CODIGO = "Digite o código da apólice/cliente para buscar: ";
 
     private static Scanner leia;
     private static int escolha;
@@ -83,11 +83,11 @@ public class SeguradoraMain {
         escolhaListagem = leia.nextInt();
 
         if (escolhaListagem == 1) {
-            imoveis.add(cadastro.cadastroImovel());
+            imoveis.add(cadastro.cadastroImovel(imoveis));
         } else if (escolhaListagem == 2) {
-            veiculos.add(cadastro.cadastroVeiculo());
+            veiculos.add(cadastro.cadastroVeiculo(veiculos));
         } else if (escolhaListagem == 3) {
-            vidas.add(cadastro.cadastroVida());
+            vidas.add(cadastro.cadastroVida(vidas));
         } else if (escolhaListagem == 0) {
             menuPrincipal();
         } else {
@@ -148,8 +148,7 @@ public class SeguradoraMain {
     }
 
     public static void subMenuListagemImovel() throws ParseException, IOException {
-        int escolhaListagem;
-        String nomeCliente;
+        int escolhaListagem, codigoCliente;
 
         subMenuListagemOpcoes();
 
@@ -158,9 +157,9 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosImoveis(imoveis);
         } else if (escolhaListagem == 2) {
-            System.out.print(MENSAGEM_CAMPO_BUSCA_NOME);
-            nomeCliente = leia.next();
-            listagem.listaImovelPorNomeCliente(imoveis, nomeCliente);
+            System.out.print(MENSAGEM_CAMPO_BUSCA_CODIGO);
+            codigoCliente = leia.nextInt();
+            listagem.listaImovelPorCodigoCliente(imoveis, codigoCliente);
         } else if (escolhaListagem == 0) {
             subMenuListagem();
         } else {
@@ -169,8 +168,7 @@ public class SeguradoraMain {
     }
 
     public static void subMenuListagemVeiculo() throws ParseException, IOException {
-        int escolhaListagem;
-        String nomeCliente;
+        int escolhaListagem, codigoCliente;
 
         subMenuListagemOpcoes();
 
@@ -179,9 +177,9 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosVeiculos(veiculos);
         } else if (escolhaListagem == 2) {
-            System.out.print(MENSAGEM_CAMPO_BUSCA_NOME);
-            nomeCliente = leia.next();
-            listagem.listaVeiculoPorNomeCliente(veiculos, nomeCliente);
+            System.out.print(MENSAGEM_CAMPO_BUSCA_CODIGO);
+            codigoCliente = leia.nextInt();
+            listagem.listaVeiculoPorCodigoCliente(veiculos, codigoCliente);
         } else if (escolhaListagem == 0) {
             subMenuListagem();
         } else {
@@ -190,8 +188,7 @@ public class SeguradoraMain {
     }
 
     public static void subMenuListagemVida() throws ParseException, IOException {
-        int escolhaListagem;
-        String nomeCliente;
+        int escolhaListagem, codigoCliente;
 
         subMenuListagemOpcoes();
 
@@ -200,9 +197,9 @@ public class SeguradoraMain {
         if (escolhaListagem == 1) {
             listagem.listaTodosVida(vidas);
         } else if (escolhaListagem == 2) {
-            System.out.print(MENSAGEM_CAMPO_BUSCA_NOME);
-            nomeCliente = leia.next();
-            listagem.listaVidaPorNomeCliente(vidas, nomeCliente);
+            System.out.print(MENSAGEM_CAMPO_BUSCA_CODIGO);
+            codigoCliente = leia.nextInt();
+            listagem.listaVidaPorCodigoCliente(vidas, codigoCliente);
         } else if (escolhaListagem == 0) {
             subMenuListagem();
         } else {
