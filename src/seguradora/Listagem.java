@@ -24,9 +24,9 @@ public class Listagem {
                         "\n-----------------------------------");
                 qtdResultados++;
             }
-            if (qtdResultados == 0) {
-                System.out.println(NENHUM_RESULTADO_PESQUISA);
-            }
+        }
+        if (qtdResultados == 0) {
+            System.out.println(NENHUM_RESULTADO_PESQUISA);
         }
     }
 
@@ -48,9 +48,9 @@ public class Listagem {
                         "\n-------------------------------------");
                 qtdResultados++;
             }
-            if (qtdResultados == 0) {
-                System.out.println(NENHUM_RESULTADO_PESQUISA);
-            }
+        }
+        if (qtdResultados == 0) {
+            System.out.println(NENHUM_RESULTADO_PESQUISA);
         }
     }
 
@@ -72,9 +72,9 @@ public class Listagem {
                         "\n----------------------------------------");
                 qtdResultados++;
             }
-            if (qtdResultados == 0) {
-                System.out.println(NENHUM_RESULTADO_PESQUISA);
-            }
+        }
+        if (qtdResultados == 0) {
+            System.out.println(NENHUM_RESULTADO_PESQUISA);
         }
     }
 
