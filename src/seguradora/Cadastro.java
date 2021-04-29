@@ -62,13 +62,13 @@ public class Cadastro {
         final String descricaoCliente = input.readLine();
         System.out.println(MENSAGEM_OPCAO_VALOR_D0_BEM);
         final float valorDoBem = Float.parseFloat(input.readLine());
-        System.out.print(MENSAGEM_OPCAO_MARCA_VEICULO);
+        System.out.println(MENSAGEM_OPCAO_MARCA_VEICULO);
         final String marcaVeiculo = input.readLine();
-        System.out.print(MENSAGEM_OPCAO_MODELO_VEICULO);
+        System.out.println(MENSAGEM_OPCAO_MODELO_VEICULO);
         final String modeloVeiculo = input.readLine();
-        System.out.print(MENSAGEM_OPCAO_ANO_FABRICACAO_VEICULO);
+        System.out.println(MENSAGEM_OPCAO_ANO_FABRICACAO_VEICULO);
         final int anoVeiculo = Integer.parseInt(input.readLine());
-        System.out.print(MENSAGEM_OPCAO_RESIDENCIA_PROPIETARIO_VEICULO);
+        System.out.println(MENSAGEM_OPCAO_RESIDENCIA_PROPIETARIO_VEICULO);
         final String residenciaPropietario = input.readLine();
 
         return new Veiculo(codigoApolice, nomeCliente, descricaoCliente, valorDoBem, marcaVeiculo, modeloVeiculo, anoVeiculo, residenciaPropietario);
@@ -83,11 +83,11 @@ public class Cadastro {
         final String descricaoCliente = input.readLine();
         System.out.println(MENSAGEM_OPCAO_VALOR_D0_BEM);
         final float valorDoBem = Float.parseFloat(input.readLine());
-        System.out.print(MENSAGEM_OPCAO_DATA_NASCIMENTO_VIDA);
+        System.out.println(MENSAGEM_OPCAO_DATA_NASCIMENTO_VIDA);
         final Date dtNascimento = new SimpleDateFormat("dd/MM/yyyy").parse(input.readLine());
-        System.out.print(MENSAGEM_OPCAO_NOME_BENEFICIARIO_VIDA);
+        System.out.println(MENSAGEM_OPCAO_NOME_BENEFICIARIO_VIDA);
         final String nomeBeneficiario = input.readLine();
-        System.out.print(MENSAGEM_OPCAO_RESIDENCIA_BENEFICIARIO_VIDA);
+        System.out.println(MENSAGEM_OPCAO_RESIDENCIA_BENEFICIARIO_VIDA);
         final String residenciaBeneficiario = input.readLine();
 
         return new Vida(codigoApolice, nomeCliente, descricaoCliente, valorDoBem, dtNascimento, nomeBeneficiario, residenciaBeneficiario);
