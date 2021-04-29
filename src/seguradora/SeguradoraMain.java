@@ -30,7 +30,7 @@ public class SeguradoraMain {
     // Escolhas Menu
     private static final String ESCOLHAS_MENU_PRINCIPAL = "Menu: \n  [ 1 ] - Cadastro\n  [ 2 ] - Listar\n  [ 3 ] - Remover\n  [ 0 ] - Sair\nDigite sua opção: ";
     private static final String ESCOLHAS_MENU_ACOES = "\n   [ 1 ] - Imóvel\n   [ 2 ] - Veículo\n   [ 3 ] - Vida\n   [ 0 ] - Voltar ao Menu Principal\nDigite sua opção: ";
-    private static final String ESCOLHAS_SUBMENU_ACOES = "\n   [ 1 ] - Listar Todos\n   [ 2 ] - Listar por Nome\n   [ 0 ] - Voltar\nDigite sua opção: ";
+    private static final String ESCOLHAS_SUBMENU_ACOES = "\n   [ 1 ] - Listar Todos\n   [ 2 ] - Listar por Código da Apólice/Cliente\n   [ 0 ] - Voltar\nDigite sua opção: ";
 
     // Títulos CRUD
     private static final String MENSAGEM_TITULO_ESCOLHA_CADASTRO = "Digite o tipo de seguro que deseja cadastrar: ";
